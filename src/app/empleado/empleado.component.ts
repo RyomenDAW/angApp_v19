@@ -9,14 +9,21 @@ import { Empleado } from './empleado';
 })
 export class EmpleadoComponent {
   public title = "Bienvenido Empleado";
-  public empleado:Empleado;
+  public empleadoExt: Empleado;
+  public trabajador: Array<any>;
+  public trabajadorExterno: boolean;
+
   //public cargo = Empleado.cargo;
   //public contratado Empleado.contratado
 
   constructor(){
-    this.empleado = new Empleado("Radahn",25);
+    this.empleadoExt = new Empleado("Radahn",25);
+    this.trabajador= [new Empleado("Marta",27)],
+                     [new Empleado("Ranni",28)],
+                     [new Empleado ("Sonne",22)]
+    this.trabajadorExterno = true;
   }
   ngOnInit(){
-    console.log(this.empleado);
+    console.log(this.empleadoExt);
   }
 }
