@@ -1,5 +1,15 @@
 <strong>Empleado Estrella</strong>
+<ul *ngIf="trabajadorExterno; else trabajadoresInternos">
+    <li>{{empleadoExt.nombre}}</li>
+</ul>
+<ng-template #trabajadoresInternos>
+    <li>Lista de trabajadores internos</li>
+</ng-template>
+
 <ul>
-    <li>{{empleado.nombre}}</li>
-    <li>{{empleado.edad}}</li>
+    @if (trabajadorExterno) {
+        <p>Esto es la directiva ngIf<li>{{empleadoExt.nombre}}</li></p>
+    }@else{
+        <li>Lista de trabajadores internos!</li>
+    }
 </ul>
