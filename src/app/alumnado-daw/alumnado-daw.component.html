@@ -1,0 +1,62 @@
+<p>alumnado-daw works!</p>
+
+<!-- <div>
+    @for (alumno of alumnos1daw; track alumno.nombre) {
+        <h2>{{ alumno.nombre }} {{ alumno.apellidos }}</h2>
+        <p><strong>DNI:</strong> {{ alumno.dni }}</p>
+        <p><strong>Fecha de nacimiento:</strong> {{ alumno.fechanacimiento }}</p>
+        <p><strong>Población:</strong> {{ alumno.poblacion }}</p>
+        <p><strong>Teléfono:</strong> {{ alumno.telefono }}</p>
+        <p><strong>Curso:</strong> {{ alumno.curso }}</p>
+
+    @for (modulo of alumno.modulos; track modulo) {
+        <p>Módulos: {{modulo}}</p>
+
+    }
+                        <br>
+
+
+    }
+
+
+
+</div> -->
+
+
+@if (alumnos1daw) {
+<button (click)="mostrarAlumnos(false)">Mostrar Alumnos1DAW</button>
+<div>
+    @for (alumno of alumnos1daw; track alumno.nombre) {
+        <h2>{{ alumno.nombre }} {{ alumno.apellidos }}</h2>
+        <p><strong>DNI:</strong> {{ alumno.dni }}</p>
+        <p><strong>Fecha de nacimiento:</strong> {{ alumno.fechanacimiento }}</p>
+        <p><strong>Población:</strong> {{ alumno.poblacion }}</p>
+        <p><strong>Teléfono:</strong> {{ alumno.telefono }}</p>
+        <p><strong>Curso:</strong> {{ alumno.curso }}</p>
+
+    @for (modulo of alumno.modulos; track modulo) {
+        <p>Módulos: {{modulo}}</p>
+
+    }
+                        <br>
+
+
+    }
+
+
+
+</div>
+}@else{
+    <button (click)="mostrarAlumnos(true)">Mostrar Alumnos1DAW</button>
+    <p>Soy algo que aparece detras de un boton!</p>
+}
+
+<!-- <ul>
+    @if (trabajadorExterno) {
+        <button (click)="cambiarExterno(false)">Mostrar Internos</button>
+        <li>{{empleadoExt.nombre}}</li>
+    }@else{
+        <button (click)="cambiarExterno(true)">Mostrar Externos</button>
+        <li>Lista de trabajadores internos</li>
+    }
+</ul> -->

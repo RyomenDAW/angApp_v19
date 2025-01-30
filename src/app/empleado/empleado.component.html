@@ -1,4 +1,4 @@
-<strong>Empleado Estrella</strong>
+<strong>Empleado Estrella!</strong>
 <ul *ngIf="trabajadorExterno; else trabajadoresInternos">
     <li>{{empleadoExt.nombre}}</li>
 </ul>
@@ -8,8 +8,10 @@
 
 <ul>
     @if (trabajadorExterno) {
-        <p>Esto es la directiva ngIf<li>{{empleadoExt.nombre}}</li></p>
+        <button (click)="cambiarExterno(false)">Mostrar Internos</button>
+        <li>{{empleadoExt.nombre}}</li>
     }@else{
-        <li>Lista de trabajadores internos!</li>
+        <button (click)="cambiarExterno(true)">Mostrar Externos</button>
+        <li>Lista de trabajadores internos</li>
     }
 </ul>
